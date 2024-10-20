@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
 
 class NamedGradient {
@@ -85,14 +86,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          brightness: Brightness.light,
           backgroundColor: Colors.transparent,
           centerTitle: true,
           elevation: 0,
           title: Text(
             widget.title!,
             style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w300),
-          ),
+          ), systemOverlayStyle: SystemUiOverlayStyle.dark,
         ),
         backgroundColor: Colors.white,
         body: ListView(
